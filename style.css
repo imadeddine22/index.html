@@ -1,0 +1,508 @@
+* {
+  font-family: 'Times New Roman', Times, serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  background-image: linear-gradient(to right, rgb(33, 1, 81) 30%, rgb(19, 0, 61));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container {
+  background-image: linear-gradient(to right, rgba(53, 15, 168, 0.457)30%, rgba(63, 27, 205, 0.47)), url(safeimagekit-purple-gaming-nepi2tnxp6g0mvz9\ \(1\).jpg);
+  height: 90%;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.container:hover {
+  background-image: linear-gradient(to right, rgba(53, 15, 168, 0.457)30%, transparent), url(safeimagekit-purple-gaming-nepi2tnxp6g0mvz9\ \(1\).jpg);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.logo {
+  text-shadow: 5px 5px 5px rgb(226, 49, 164);
+  margin-top: 100px;
+  font-size: 30px;
+  text-transform: capitalize;
+  position: fixed;
+  z-index: 1000;
+  letter-spacing: 2px;
+
+}
+.logo:hover{
+transition: all 1s;
+}
+
+
+ul {
+  position: fixed;
+  margin-top: 100px;
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  justify-content: space-evenly;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+ul a {
+  border-bottom: 2px solid transparent;
+  flex-wrap: wrap;
+
+}
+
+ul a:hover {
+  border-bottom-color: white;
+
+}
+
+#home {
+  
+  display: inline-block;
+  margin-top: 200px;
+  margin-left: 150px;
+  color: white;
+  font-size: 30px;
+  text-shadow: 5px 5px 5px rgb(169, 16, 169);
+  flex-wrap: wrap;
+ 
+    opacity: 0;
+    transform: scale(0.8);
+    animation: ppp 1.5s ease-in-out forwards;
+}
+
+@keyframes ppp {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.sam {
+  background-color: rgba(0, 0, 0, 0.258);
+  flex-wrap: wrap;
+}
+
+#home:hover {
+  transition: all 1s;
+    }
+
+
+.pro {
+  width: 70px;
+  height: 70px;
+  margin-left: 960px;
+  position: relative;
+  bottom: 250px;
+  flex-wrap: wrap;
+  transition: all 1s;
+}
+
+.after {
+  width: 70px;
+  height: 70px;
+  margin-left: 900px;
+  position: relative;
+  bottom: 220px;
+  flex-wrap: wrap;
+  transition: all 1s;
+}
+
+img:hover {
+  transform: scale(1.4);
+}
+
+#services {
+  margin-top: 60px;
+  text-align: center;
+}
+
+#services h1 {
+  text-align: center;
+  background-color: rgba(170, 168, 172, 0.21);
+  color: white;
+  position: relative;
+bottom: 60px;
+}
+
+
+
+#services h2 {
+  text-align: center;
+  padding-top: 100px;
+  color: white;
+  font-size: 30px;
+  transition: all 1s;
+}
+
+
+
+
+
+#services h2:hover {
+  display: inline-block;
+  font-size: 40px;
+  text-shadow: 5px 5px 5px rgb(169, 16, 169);
+}
+
+
+.video-gallery {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* / الفيديوهات الخلفية  */
+.background-videos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  z-index: 1;
+  filter: blur(5px);
+  /* تأثير الضبابية */
+}
+
+.video-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transform: scaleX(-1);
+  /* عكس الفيديو */
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* الفيديو الرئيسي */
+.main-video {
+  position: relative;
+  z-index: 2;
+  width: 70%;
+  max-width: 180px;
+
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  transition: all 1s;
+}
+
+.main-video video {
+  width: 180px;
+  height: 270px;
+  border-radius: 20px;
+  transition: all 1s;
+}
+.main-video:hover{
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.932);
+  width: 80%;
+  max-width: 190px;
+}
+.main-video video:hover{
+  width: 190px;
+    height: 280px;
+    border-radius: 20px;
+}
+
+
+/* أزرار التحكم */
+.controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 20px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgba(8, 3, 3, 0.719);
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transition: all 1s;
+}
+
+.controls button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 12px 22px;
+  color: black;
+}
+
+
+
+ 
+
+#contact .aa{
+   margin-top: 60px;
+      text-align: center;
+      color: white;
+}
+ 
+#contact form {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  max-width: 800px;
+  height: 450px;
+  margin: auto;
+}
+
+#contact form label {
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 18px;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+#contact form button {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+#contact form button:hover {
+  background-color: rgba(255, 255, 255, 0.61);
+  color: rgb(0, 0, 0);
+  padding: 16px 26px;
+}
+
+#contact h2 {
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+}
+
+#contact a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+#about {
+  color: white;
+  font-size: 25px;
+  transition: all 0.5s ease;
+}
+#about h1{
+    background-color: rgba(170, 168, 172, 0.21);
+  text-align: center;
+  color: white;
+font-size: 45px;
+}
+
+#about img {
+ position: relative;
+ top: 80px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+  width: 220px;
+  border: 4px solid #25D366;
+}
+
+
+
+#about p {
+  background-color: rgba(93, 23, 164, 0.655);
+  text-align: justify;
+  margin-top: 100px;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  line-height: 1.6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#about h2 {
+  margin-top: 0px;
+  text-align: center;
+  font-size: 35px;
+  color: #fff;
+  background-color: rgba(170, 168, 172, 0.21);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#about a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #25D366;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+#about .tlf {
+  display: inline-block;
+  margin:0  auto;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.3s ease;
+  margin-left: 320px;
+}
+
+#about .tlf:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+}
+
+
+#about a:hover {
+  background-color: #128C7E;
+}
+
+#about a img {
+  display: block;
+  margin: 0 auto;
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .container {
+    width: 100%;
+    height: auto;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .logo {
+    margin-top: 4px;
+    font-size: 24px;
+  }
+
+  ul {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  ul a {
+    margin-bottom: 10px;
+  }
+
+  #home {
+    margin-top: 100px;
+    margin-left: 20px;
+    font-size: 24px;
+  }
+
+  .pro, .after {
+    margin-left: 0;
+    bottom: 0;
+  }
+
+  #services h1, #services h2 {
+    font-size: 24px;
+  }
+
+  .main-video {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .main-video video {
+    width: 100%;
+    height: auto;
+  }
+
+  #contact form {
+    width: 90%;
+    height: auto;
+  }
+
+  #about h1, #about h2 {
+    font-size: 30px;
+  }
+
+  #about p {
+    font-size: 16px;
+  }
+
+  #about .tlf {
+    margin-left: 0;
+  }
+}
+

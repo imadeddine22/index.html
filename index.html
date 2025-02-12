@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO EDITOR</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a class="logo" href="#">IXMAD</a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </header>
+        <div id="home">
+            <h2>Hi Im Imad</h2>
+            <br>
+            <h3>Editor Video</h3>
+            <br>
+            <h3 class="sam">where evry frams tell your story</h3>
+        </div>
+        <div>
+            <img class="pro" src="pro.jpg">
+            <img class="after" src="Untitled design (1)_11zon.png">
+        </div>
+<br><br><br><br><br><br>
+        <hr>
+        <div id="services">
+            <h1>SERVICRS</h1>
+
+            <h2>You Need This</h2>
+
+        <div class="video-gallery">
+            <!-- الفيديوهات الخلفية -->
+            <div class="background-videos">
+                <div class="video-wrapper">
+                    <video src="9mp.mp4" muted loop></video>
+                </div>
+                <div class="video-wrapper">
+                    <video src="8.mp4" muted loop></video>
+                </div>
+                <div class="video-wrapper">
+                    <video src="0115.mp4" muted loop></video>
+                </div>
+                <div class="video-wrapper">
+                    <video src="14.mp4" muted loop></video>
+                </div>
+                <div class="video-wrapper">
+                    <video src="15.mp4" muted loop></video>
+                </div>
+                <div class="video-wrapper">
+                    <video src="16m.mp4" muted loop></video>
+                </div>
+                <div class="video-wrapper">
+                    <video src="18.mp4" muted loop></video>
+                </div>
+                <div class="video-wrapper">
+                    <video src="2.mp4" muted loop></video>
+                </div>
+                <div class="video-wrapper">
+                    <video src="20mp.mp4" muted loop></video>
+                </div>
+                <div class="video-wrapper">
+                    <video src="3mp4.mp4" muted loop></video>
+                </div>
+                <div class="video-wrapper">
+                    <video src="4mp.mp4" muted loop></video>
+                </div>
+                <!-- كرر للـ 12 فيديو -->
+                <div class="video-wrapper">
+                    <video src="7mp.mp4" muted loop></video>
+                </div>
+            </div>
+        
+            <!-- الفيديو الرئيسي -->
+            <div class="main-video">
+                <video id="mainVideo" controls></video>
+            </div>
+        
+            <!-- أزرار التحكم -->
+            <div class="controls">
+                <button id="backBtn">Back</button>
+                <button id="nextBtn">Next</button>
+            </div>
+
+            <script>
+                const videos = document.querySelectorAll('.background-videos video');
+                const mainVideo = document.getElementById('mainVideo');
+                let currentIndex = 0;
+
+                function updateMainVideo(index) {
+                    mainVideo.src = videos[index].src;
+                    mainVideo.play();
+                }
+
+                document.getElementById('nextBtn').addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % videos.length;
+                    updateMainVideo(currentIndex);
+                });
+
+                document.getElementById('backBtn').addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + videos.length) % videos.length;
+                    updateMainVideo(currentIndex);
+                });
+
+                // Initialize with the first video
+                updateMainVideo(currentIndex);
+            </script>
+        </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+
+
+<div id="contact">
+    <h1 class="aa"><bold>CONTACT</bold></h1>
+   
+    <form>
+        <title>Contact us</title>
+        <label for="name">User Name</label>
+        <input type="text" id="name" name="name" placeholder="Write your name.." required>
+        
+        <label for="email">This is my Email</label>
+        <input type="email" id="email" name="email" value="ieddine008@gmail.com"   required >
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message.." required></textarea>
+        
+        <button type="submit">Send</button>
+
+        <script>
+            document.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                
+                window.location.href = `mailto:ieddine008@gmail.com?subject=Message from ${name}&body=${message} (Email: ${email})`;
+            });
+        </script>
+    </form>
+
+   
+
+</div>
+<br>
+<br><br>
+<br><br>
+<hr>
+        </div>
+
+ 
+
+ <hr>
+<div id="about">
+    <h1>ABOUT</h1>
+    <img src="jj.jpg" alt="Imad's Profile Picture" >
+    <p>Hello! I'm Imad from ALgeria, im professional video editor with a passion for storytelling through visuals.  With years of experience in the industry, I have honed my skills to deliver high-quality video content that resonates with audiences.
+   Whether it's a promotional video, a documentary, or a personal project, I bring creativity and technical expertise to every project I undertake. Let's work together to bring your vision to life!</p>
+    <h2>Contact Me</h2>
+    <p class="tlf">+213 675 97 15 18</p>
+    <a href="https://wa.me/1234567890" target="_blank">
+        
+        Chat with me on WhatsApp
+    </a>
+   <br>
+   <br><br>
+</div>
+</body>
+</html>
